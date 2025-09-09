@@ -9,7 +9,17 @@
       src="https://kit.fontawesome.com/d8ec724f9d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js" defer></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "hJLqa4rsc6P8iEghZ",
+      });
+   })();
+</script>
   </head>
   <body>
     <section id="landing-page">
@@ -89,26 +99,59 @@
       <div class="modal">
         <div class="modal__half modal__about">
             <h3 class="modal__title modal__title--about">Here is a bit about me.</h3>
-            <h4 class="madal__sub-title madal__sub-title--about"></h4>
-            <p class="modal__para">I'm a frontend Software Engineer from Utah with a strong 
-                passion for building web applications with great user experiences.
+            <h4 class="madal__sub-title madal__sub-title--about"> Frontend Software Engineer.</h4>
+            <p class="modal__para">I'm a <b class="orange">frontend Software Engineer</b> from Utah with a strong 
+                passion for building web applications with great <b class="orange">user experiences.</b>
                 <br>
-                I currently work on extremely difficult problems at a fast pace and i have 
-                eagerness to learn and grow as a developer. here are some of the languages i know. 
+                I currently work on <b class="orange">extremely difficult problems</b> at a fast pace and i have 
+                eagerness to learn and grow as a developer. <b class="orange">here are some of the languages i know.</b> 
             </p>
             <div class="modal__languages">
-                <figure>
-                    <img src="https://www.w3schools.com/whatis/img_js.png" alt="">
+                <figure class="modal__language"> 
+                    <img class="modal__language--img" src="https://www.w3schools.com/whatis/img_js.png" alt="">
+                    <span class="language__name">JavaScript</span>
                 </figure>
-                 <figure>
-                    <img src="https://www.thecrazyprogrammer.com/wp-content/uploads/2017/11/CSS3.jpg" alt="">
+                 <figure class="modal__language"> 
+                    <img class="modal__language--img" src="https://static.vecteezy.com/system/resources/previews/001/416/680/non_2x/css3-emblem-blue-shield-and-white-text-vector.jpg" alt="">
+                    <span class="language__name">CSS</span>
                 </figure>
-                 <figure>
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.sTD3jjh3OYnaOY4GJvP4SAHaHa?r=0&cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                 <figure class="modal__language"> 
+                    <img class="modal__language--img"  src="https://tse2.mm.bing.net/th/id/OIP.sTD3jjh3OYnaOY4GJvP4SAHaHa?r=0&cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+                    <span class="language__name">HTML</span>
                 </figure>
             </div>
         </div>
-        <div class="modal__half modal__contact">Lets have a chat.</div>
+        <div class="modal__half modal__contact">
+            <h3 class="modal__title modal__title--contact">
+                Let's have a chat.
+            </h3>
+            <h3 class="modal__sub-title modal__sub-title--contact">
+                I am currently looking for new opportunities, my inbox is always open. 
+            </h3>
+            <form id="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                    <label class="form__item--label">Name</label>
+                    <input class="input" name="user__name" type="text" ></input>
+                </div>
+                 <div class="form__item">
+                    <label class="form__item--label">Email</label>
+                    <input class="input" name="user__Email" type="email" ></input>
+                </div>
+                 <div class="form__item">
+                    <label class="form__item--label">Message</label>
+                    <textarea class="input" name="message" type="text" ></textarea>
+                </div>
+                <button id="contact__submit" class="form__submit">
+                    Send it my way!
+                </button>
+            </form>
+            <div class="modal__overlay modal__overlay--loading">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success modal__overlay--visible">
+                Thank you for the message! Looking forward to connecting.
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
