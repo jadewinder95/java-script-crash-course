@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/d8ec724f9d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -131,25 +131,26 @@
             <form id="contact__form" onsubmit="contact(event)">
                 <div class="form__item">
                     <label class="form__item--label">Name</label>
-                    <input class="input" name="user__name" type="text" ></input>
+                    <input class="input" name="user_name" type="text" />
                 </div>
                  <div class="form__item">
                     <label class="form__item--label">Email</label>
-                    <input class="input" name="user__Email" type="email" ></input>
+                    <input class="input" name="user_email" type="email" />
                 </div>
                  <div class="form__item">
                     <label class="form__item--label">Message</label>
                     <textarea class="input" name="message" type="text" ></textarea>
                 </div>
-                <button id="contact__submit" class="form__submit">
+                <button id="contact__submit" class="form__submit" type="submit">
                     Send it my way!
                 </button>
             </form>
             <div class="modal__overlay modal__overlay--loading">
                 <i class="fas fa-spinner"></i>
             </div>
-            <div class="modal__overlay modal__overlay--success modal__overlay--visible">
+            <div class="modal__overlay modal__overlay--success">
                 Thank you for the message! Looking forward to connecting.
+            </div>
         </div>
         <i class="fas fa-times modal__exit click"></i>
       </div>
@@ -189,7 +190,7 @@
         </div>
       </div>
     </section>
-     <section id="projects">
+     <section id="projects2">
       <div class="container">
         <div class="row">
           <h1 class="section__title">
@@ -224,7 +225,7 @@
         </div>
       </div>
     </section>
-     <section id="projects">
+     <section id="projects3">
       <div class="container">
         <div class="row">
           <h1 class="section__title">
