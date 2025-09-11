@@ -1,7 +1,17 @@
-//service_acjew8j
-//template_9yxcq7m
-//hJLqa4rsc6P8iEghZ
-const SCOPES = ["https://mail.google.com/"];
+let contrastToggle = false
+
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+    document.body.classList += " dark-theme"
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+}
+
+
 
 function contact(event) {
     event.preventDefault();
@@ -10,7 +20,7 @@ function contact(event) {
     emailjs
       .sendForm(
         'service_acjew8j',
-        "template_9yxcq7m",
+        "template_nc3gamw  ",
         event.target,
         'user_hJLqa4rsc6P8iEghZ'
   ).then(() => {
